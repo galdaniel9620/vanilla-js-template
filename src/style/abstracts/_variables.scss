@@ -1,0 +1,58 @@
+// Colors
+$primary-color: #4A90E2;  // Assuming a blue color scheme based on the psychology theme
+$secondary-color: #F5A623;  // A warm accent color
+$text-color: #333333;
+$background-color: #FFFFFF;
+$light-gray: #F5F5F5;
+$dark-gray: #4A4A4A;
+
+$size: 8px;
+
+$font-size-base: 16px;
+$font-size-small: 14px;
+$font-size-large: 18px;
+$font-size-xlarge: 24px;
+$font-size-xxlarge: 32px;
+
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$spacing-xlarge: 32px;
+
+// Border radius
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 12px;
+
+// Transitions
+$transition-speed: 0.3s;
+$transition-easing: ease-in-out;
+
+// Z-index
+$z-index-header: 1000;
+$z-index-modal: 2000;
+
+// Box shadows
+$box-shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+// Specific component variables
+$header-height: 80px;
+$footer-height: 60px;
+$hero-section-min-height: 600px;
+
+$breakpoints: (
+    // Mobile
+    "425": 425px,
+    // Tablets
+    "768": 768px,
+    "1024": 1024px,
+    // Computers (Laptops/Desktops)
+    "1280": 1280px,
+    "1440": 1440px,
+);

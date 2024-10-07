@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { visualizer } from 'rollup-plugin-visualizer'
+import sass from 'sass' 
 
 export default defineConfig({
     base: './',
@@ -34,10 +35,10 @@ export default defineConfig({
       }
     },
     css: {
-        preprocessorOptions: {
-          scss: {
-            additionalData: `@import "./src/style/style.scss";`
-          }
+      preprocessorOptions: {
+        scss: {
+          implementation: sass
         }
       }
+    }
   })
