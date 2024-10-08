@@ -1,10 +1,10 @@
 // Colors
-$primary-color: #4A90E2;  // Assuming a blue color scheme based on the psychology theme
+$primary-color: #193058;  // Assuming a blue color scheme based on the psychology theme
 $secondary-color: #F5A623;  // A warm accent color
-$text-color: #333333;
+$text-color: #181818;
 $background-color: #FFFFFF;
 $light-gray: #F5F5F5;
-$dark-gray: #4A4A4A;
+$dark-gray: #454545;
 
 $size: 8px;
 
@@ -16,6 +16,15 @@ $font-size-xxlarge: 32px;
 
 $line-height-base: 1.5;
 $line-height-heading: 1.2;
+
+$h1: 64px;
+$h2: 36px;
+$h3: 24px;
+$h4: 16px;
+
+// Width sizeing
+$inner: 1280px;
+$nav-height: 80px;
 
 // Spacing
 $spacing-small: 8px;
@@ -48,11 +57,11 @@ $hero-section-min-height: 600px;
 
 $breakpoints: (
     // Mobile
-    "425": 425px,
+    "xs": 425px,
     // Tablets
-    "768": 768px,
-    "1024": 1024px,
+    "sm": 768px,
+    "md": 1024px,
     // Computers (Laptops/Desktops)
-    "1280": 1280px,
-    "1440": 1440px,
+    "xl": 1280px,
+    "xxl": 1440px,
 );

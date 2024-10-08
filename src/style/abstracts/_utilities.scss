@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inner {
+    max-width: $inner;
+    width: 100%;
+    margin: 0 auto;
+    padding: $size * 8 $size * 3;
+}
+
+a {
+    color: $primary-color;
+    font-weight: 500;
+}
+

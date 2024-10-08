@@ -1,6 +1,6 @@
-export default Navbar  
+export default NavBar  
 
-function Navbar () {
+function NavBar () {
     const navLinks = [
             'Acasă',
             'Despre',
@@ -8,10 +8,10 @@ function Navbar () {
         ]
     
     const linksHTML = navLinks.map(link => 
-        `<a href="javascript:(void)}" data-link>${link}</a>`
+        `<li><a href="javascript:(void)}" data-link>${link}</a></li>`
     ).join('')  
 
-    return `<nav>
-          ${linksHTML}
-    </nav>`
+    return `<ul>
+            ${linksHTML}
+        </ul>`
 }

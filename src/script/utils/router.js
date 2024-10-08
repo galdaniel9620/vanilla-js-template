@@ -1,7 +1,7 @@
-import Header from '../components/Header.js';
+import NavBar from '../ui/NavBar.js';
 import Footer from '../components/Footer.js';
-import NotFound from '../../pages/notfound/NotFound.js';
-import Home from '../../pages/home/home.js';
+import NotFound from '../pages/notfound/NotFound.js';
+import Home from '../pages/home/home.js';
 
 const routes = {
     '/': Home,
@@ -9,6 +9,9 @@ const routes = {
   
   function router() {
     const app = document.querySelector('#app');
+    const nav = document.querySelector('#nav');
+    const footer = document.querySelector('#footer');
+
     const page = routes[location.pathname] || NotFound;
     
     if (page === NotFound) {
@@ -16,11 +19,9 @@ const routes = {
         ${page()}
       `;
     } else {
-      app.innerHTML = `
-        ${Header()}
-        ${page()}
-        ${Footer()}
-      `;
+      nav.innerHTML = `${NavBar()}`
+      app.innerHTML = `${page()}`;
+      footer.innerHTML = `${Footer()}`;
     }
   
     // Add active class to current nav item

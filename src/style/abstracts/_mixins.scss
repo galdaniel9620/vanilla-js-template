@@ -1,0 +1,6 @@
+@use "variables" as *;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}

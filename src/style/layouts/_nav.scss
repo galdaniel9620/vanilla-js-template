@@ -4,9 +4,22 @@
 /* Navigation */
 
 nav {
+    height: $nav-height;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.inner {
+        padding-block: unset;
+    }
+
+    ul {
+        display: flex;
+    }
+
     a {
         text-decoration: none;
         color: $text-color;
-        padding-inline: $size;
+        padding-inline-start: $size * 10;
     }
 }
