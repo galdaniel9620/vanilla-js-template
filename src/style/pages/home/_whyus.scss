@@ -1,0 +1,46 @@
+@use '../../abstracts' as *;
+
+.whyus-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    &_left, &_right {
+        @include flex-column;
+        @media (width > 768px) {
+            width: 50%;
+        }
+    }
+
+    &_left {
+        h2 {
+            margin-block-end: $size * 5;
+            max-width: $size * 50;
+        }
+
+        ul {
+            margin-block-end: $size * 5;
+            @include flex-column;
+            gap: $size * 4;
+
+            li {
+                font-size: $h3;
+            }
+        }
+
+        p {
+            max-width: $size * 64;
+            font-size: $font-size-small;
+        }
+    }
+
+    &_right {
+        display: flex;
+        aspect-ratio: 2/1;
+        border-radius: $border-radius-large;
+        background-color: $dark-gray;
+        object-fit: cover;
+    }
+
+}

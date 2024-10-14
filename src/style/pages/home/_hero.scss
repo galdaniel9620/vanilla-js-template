@@ -1,0 +1,89 @@
+@use '../../abstracts' as *;
+
+.hero-section {
+    @include flex-column;
+    min-height: $hero-min-height;
+
+    &_header{
+        padding-inline: $inner-padding-inline;
+        padding-block: $size * 8;
+
+        @media (width > 769px ) {
+            height: $hero-min-height-half;
+        }
+
+        h1 {
+            max-width: 600px;
+            margin-bottom: $size * 8;
+        }
+    }
+
+    &_footer {
+        @include flex-center;
+        padding-block: $size * 6;
+        background: linear-gradient(90deg, rgba(25,48,88,1) 0%, rgba(28,29,52,1) 100%);
+        padding-inline: $inner-padding-inline;
+
+        @media (width > 769px ) {
+            height: $hero-min-height-half;
+        }
+
+        .card {
+            max-width: $inner;
+            flex-direction: column;
+            width: fit-content;
+            margin: 0 auto;
+            padding: $size * 4 $size * 3;
+
+            @media (width > 768px) {
+                padding: $size * 4 $size * 6;
+            }
+
+            h3 {
+                margin-block-end: $size/2;
+            }
+
+            p {
+                margin-block-end: $size * 3;
+                font-size: $font-size-small;
+            }
+        }
+
+        .card_inputs {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            column-gap: $size * 5;
+            row-gap: $size * 2;
+
+            label, button {
+                min-width: 100%;
+
+                @media (width > 768px) {
+                    min-width: 250px;
+                }
+            }
+
+            button {
+                @media (width < 769px) {
+                    margin-block-start: $size * 2;
+                }
+            }
+
+            #showPrice {
+                min-width: 250px;
+                color: $primary-color;
+
+                @media (width <= 768px) {
+                    margin-top: $size * 2;
+                }
+
+                span {
+                    font-size: $font-size-large;
+                }
+            }
+        }
+    }
+
+
+}

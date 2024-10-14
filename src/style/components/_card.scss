@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.card {
+    background-color: $white-color;
+    border-radius: $border-radius-medium; 
+    display: flex;  
+}

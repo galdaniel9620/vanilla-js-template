@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-weight: 400;
 }
 
 #app {
@@ -16,7 +17,11 @@ body {
     max-width: $inner;
     width: 100%;
     margin: 0 auto;
-    padding: $size * 8 $size * 3;
+    padding: $size * 8 $size * 2;
+
+    @media (width > 768px) {
+        padding: $size * 10 $size * 3;
+    }
 }
 
 a {
@@ -24,3 +29,50 @@ a {
     font-weight: 500;
 }
 
+
+*,h1,h2,h3,h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-small;
+}
+
+input {
+    margin-block-start: $size;
+    background-color: $input-bg;
+    border: 1px solid $input-borer;
+    height: $size * 6;
+    padding: $size;
+    border-radius: $border-radius-small;
+    width: 100%;
+
+    @media (width > 758px) {
+        max-width: 300px;
+    }
+}
+
+p {
+    color: $dark-gray;
+    font-weight: 400;
+    line-height: 24px;
+}

@@ -11,7 +11,10 @@ function NavBar () {
         `<li><a href="javascript:(void)}" data-link>${link}</a></li>`
     ).join('')  
 
-    return `<ul>
-            ${linksHTML}
-        </ul>`
+    return `
+        <div class="inner">
+            <ul>
+                ${linksHTML}
+            </ul>
+        </div>`
 }

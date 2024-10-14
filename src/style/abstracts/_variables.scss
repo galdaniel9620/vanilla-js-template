@@ -3,8 +3,15 @@ $primary-color: #193058;  // Assuming a blue color scheme based on the psycholog
 $secondary-color: #F5A623;  // A warm accent color
 $text-color: #181818;
 $background-color: #FFFFFF;
-$light-gray: #F5F5F5;
+$white-color: #FDFDFD;
 $dark-gray: #454545;
+$linear: linear-gradient(90deg, rgba(25,48,88,1) 0%, rgba(28,29,52,1) 100%);
+
+$input-bg: #F5F5F5;
+$input-borer: #A7A7A7;
+
+$color-start: #193058;
+$color-end: #1c1d34;
 
 $size: 8px;
 
@@ -17,14 +24,24 @@ $font-size-xxlarge: 32px;
 $line-height-base: 1.5;
 $line-height-heading: 1.2;
 
-$h1: 64px;
-$h2: 36px;
+$h1: 40px;
+$h2: 32px;
 $h3: 24px;
 $h4: 16px;
 
+@media (width > 769px) {
+    $h1: 64px;
+    $h2: 36px;
+}
+
 // Width sizeing
 $inner: 1280px;
+$inner-padding-inline: 16px;
 $nav-height: 80px;
+
+@media (width > 769px) {
+    $inner-padding-inline: 40px;
+}
 
 // Spacing
 $spacing-small: 8px;
@@ -33,9 +50,9 @@ $spacing-large: 24px;
 $spacing-xlarge: 32px;
 
 // Border radius
-$border-radius-small: 4px;
-$border-radius-medium: 8px;
-$border-radius-large: 12px;
+$border-radius-small: 8px;
+$border-radius-medium: 12px;
+$border-radius-large: 20px;
 
 // Transitions
 $transition-speed: 0.3s;
@@ -53,8 +70,8 @@ $box-shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.1);
 // Specific component variables
 $header-height: 80px;
 $footer-height: 60px;
-$hero-section-min-height: 600px;
-
+$hero-min-height: calc(100vh - 80px);
+$hero-min-height-half: calc((100vh - 80px) / 2);
 $breakpoints: (
     // Mobile
     "xs": 425px,

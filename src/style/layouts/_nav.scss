@@ -4,22 +4,28 @@
 /* Navigation */
 
 nav {
-    height: $nav-height;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    &.inner {
-        padding-block: unset;
-    }
-
-    ul {
+    & > div {
+        height: $nav-height;
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background-color:  $background-color;
+    
+        &.inner {
+            padding-block: unset;
+        }
+    
+        ul {
+            display: flex;
+        }
+    
+        a {
+            text-decoration: none;
+            padding-inline-start: $size * 10;
+            font-size: $font-size-large;
+        }
     }
 
-    a {
-        text-decoration: none;
-        color: $text-color;
-        padding-inline-start: $size * 10;
-    }
 }

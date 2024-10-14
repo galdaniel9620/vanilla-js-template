@@ -1,0 +1,32 @@
+@use '../../abstracts' as *;
+
+.presentation-section {
+    &_header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        p {
+            max-width: $size * 70;
+            @media (width < 769px){
+                order: 2;
+                margin-block-start: $size * 5;
+            }
+        }
+
+        h2{
+            max-width: $size * 40;
+        }
+    }
+
+    &_footer {
+        display: flex;
+        // height: 100%;
+        // max-height: $size * 96;
+        aspect-ratio: 16/9;
+        width: auto;
+        border-radius: $border-radius-large;
+        background-color: $dark-gray;
+        margin-block-start: $size * 7;
+    }
+}

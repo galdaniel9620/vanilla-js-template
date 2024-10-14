@@ -1,5 +1,13 @@
+import Hero from './Hero'; 
+import About from './About';
+import Presentation from './Presentation';
+import Whyus from './Whyus';
+
 export default function Home () {
     return `
-        <h1>Test</h1> 
+    ${Hero()}
+    ${About()}
+    ${Presentation()}
+    ${Whyus()}
     `
 }
