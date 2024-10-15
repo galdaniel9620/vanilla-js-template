@@ -8,8 +8,6 @@ window.submitForm = function() {
     const guarantee = 500
     const tva = 1.19
     
-    let daysPrice = inputDays > 1 ? 50 : 150
-
     if (inputTrack <= 300) {
         kmPrice = 0
     } else if (inputTrack <= 500) {
@@ -25,6 +23,9 @@ window.submitForm = function() {
     } else {
         kmPrice = 0
     }
+
+    let daysPrice = inputTrack > 300 ? 50 : 150
+
     
     totalPrice = ((inputTrack * kmPrice) + (inputDays * daysPrice) + guarantee + tva).toFixed(2) + " EUR"
 
