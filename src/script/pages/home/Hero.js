@@ -47,7 +47,7 @@ window.submitForm = function() {
 
 function Hero () {
     const hero = {
-        h1: "Find your best car for your awesome trip with us",
+        h1: "Trailere de închiriat: soluția flexibilă pentru afacerea ta",
         h3: "Simulează preț"
     }
 
