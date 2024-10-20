@@ -14,6 +14,10 @@
     }
 
     &_left {
+        @media (width > 768px) {
+            padding-block: $size * 14;
+        }
+
         h2 {
             margin-block-end: $size * 5;
             max-width: $size * 50;
@@ -22,7 +26,7 @@
         ul {
             margin-block-end: $size * 5;
             @include flex-column;
-            gap: $size * 4;
+            gap: $size * 3;
 
             li {
                 font-size: $h3;
@@ -41,6 +45,10 @@
         border-radius: $border-radius-large;
         background-color: $dark-gray;
         object-fit: cover;
+        
+        @media (width < 769px) {
+            width: 100%;
+        }
     }
 
 }

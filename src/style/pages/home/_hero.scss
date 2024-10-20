@@ -7,13 +7,16 @@
     &_header{
         padding-inline: $inner-padding-inline;
         padding-block: $size * 8;
+        max-width: $inner;
+        margin: 0 auto;
+        width: 100%;
 
         @media (width > 769px ) {
             height: $hero-min-height-half;
         }
 
         h1 {
-            max-width: 600px;
+            max-width: 400px;
             margin-bottom: $size * 8;
         }
     }
@@ -23,6 +26,7 @@
         padding-block: $size * 6;
         background: linear-gradient(90deg, rgba(25,48,88,1) 0%, rgba(28,29,52,1) 100%);
         padding-inline: $inner-padding-inline;
+        
 
         @media (width > 769px ) {
             height: $hero-min-height-half;
@@ -30,22 +34,30 @@
 
         .card {
             max-width: $inner;
-            flex-direction: column;
+            flex-wrap: wrap;
             width: fit-content;
             margin: 0 auto;
             padding: $size * 4 $size * 3;
+            column-gap: $size * 5;
+            row-gap: $size * 2;
+            width: 100%;
 
             @media (width > 768px) {
                 padding: $size * 4 $size * 6;
             }
 
             h3 {
-                margin-block-end: $size/2;
+                margin-block-end: calc($size / 2)
             }
 
             p {
-                margin-block-end: $size * 3;
+                margin-block-end: $size * 1;
                 font-size: $font-size-small;
+                max-width: 800px;
+
+                &:last-of-type {
+                    margin-block-end: $size * 3;
+                }
             }
         }
 
@@ -80,6 +92,61 @@
 
                 span {
                     font-size: $font-size-large;
+                }
+            }
+        }
+
+        .card_right {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            @media (width > 768px) {
+                width: 250px;
+                padding-inline-start: $size * 4;
+            }
+
+            #showPrice {
+                display: flex;
+                flex-direction: column;
+                gap: calc($size / 2);
+
+                @media (width < 769px) {
+                    width: 100%;
+                    margin-block-start: $size * 3;
+                }
+
+                span:not(.tva-span):not(.tooltiptext) {
+                    border-top: 1px solid $dark-gray;
+                    padding-block: 6px;
+                    padding-inline-end: $size * 5;
+                    font-size: $font-size-small;
+                    display: flex;
+                    align-items: center;
+
+                    &.total-price {
+                        font-size: $font-size-large;
+                        font-weight: 500;
+                        color: $text-color;
+                    }
+                }
+
+                .tva-span {
+                    font-size: $font-size-small;
+                    color: $dark-gray;
+                }
+
+                .tooltip {
+                    margin-inline-start: $size ;
+                    background: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: $white-color;
+                    width: $size * 2;
+                    height: $size * 2;
+                    font-size: $font-size-small;
                 }
             }
         }

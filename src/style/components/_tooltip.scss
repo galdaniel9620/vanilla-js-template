@@ -1,0 +1,45 @@
+@use "../abstracts/" as *;
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: $size * 34;
+    background-color: $primary-color;
+    color: $white-color;
+    text-align: center;
+    border-radius: $border-radius-small;
+    padding: $size;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -$size * 17;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    @media (width < 428px) {
+        width: $size * 40;
+        margin-left: -$size * 20;
+    }
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $primary-color transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
