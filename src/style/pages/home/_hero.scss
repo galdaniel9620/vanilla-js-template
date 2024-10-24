@@ -6,18 +6,53 @@
 
     &_header{
         padding-inline: $inner-padding-inline;
-        padding-block: $size * 8;
         max-width: $inner;
         margin: 0 auto;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
         @media (width > 769px ) {
             height: $hero-min-height-half;
+            flex-direction: row;
         }
+
 
         h1 {
             max-width: 400px;
             margin-bottom: $size * 8;
+        }
+
+        .split-container_left {
+            padding-block: $size * 8;
+            width: 100%;
+
+            @media (width < 769px) {
+                height: 640px;
+            }
+        }
+
+        .split-container_right {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+
+            @media (width < 769px) {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+
+            img {
+                width: fit-content;
+
+                @media (width < 769px) {
+                    width: 100%;
+                }
+            }
+
+            
         }
     }
 

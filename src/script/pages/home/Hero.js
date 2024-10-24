@@ -1,3 +1,4 @@
+import europebg from "../../../assets/img/europebg.png"
 import Button from "../../ui/Button";
 import Tooltip from "../../ui/tooltip";
 
@@ -47,7 +48,7 @@ window.submitForm = function() {
 
 function Hero () {
     const hero = {
-        h1: "Trailere de închiriat: soluția flexibilă pentru afacerea ta",
+        h1: "Trailere de închiriat: soluția optimă pentru afacerea ta",
         h3: "Simulează preț"
     }
 
@@ -58,13 +59,15 @@ function Hero () {
                 <h1>${hero.h1}</h1>
                 ${Button('Contact')}
             </div>
-            <div class="split-container_right"></div>
+            <div class="split-container_right">
+                <img src="${europebg}" fetchpriority="height">
+            </div>
         </div>
         <div class="hero-section_footer">
             <div class="card" name="simulare">
                 <div class="card_left">
                     <h3>${hero.h3}</h2>
-                    <p>Închirierea se taxează la km(conform gps din dotarea semiremorcilor) și la zi(fiecare început de 24h).</br> La prețurile afișate se adaugă tva. Se poate inchiria doar de catre persoane juridice.</br>Se facturează costul în lei (curs BNR +1%), plus 500 euro garanție.</p>
+                    <p>Închirierea se taxează la km(conform gps din dotarea semiremorcilor) și la zi(fiecare început de 24h).</br> Se poate inchiria doar de catre persoane juridice. Se facturează costul în lei (curs BNR +1%).</p>
                  
                     <div class="card_inputs">
                         <label>
